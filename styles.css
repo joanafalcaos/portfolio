@@ -35,20 +35,94 @@ nav ul li a {
 }
 
 #intro {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 50px 20px;
-    background-color: #333;
+    background-color: #fff;
+    color: #333;
+    min-height: 100vh;
+}
+
+.intro-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.intro-text {
+    max-width: 50%;
+    margin-left: 200px;
+}
+
+.intro-text h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.intro-text h2 {
+    color: #FFC107;
+    margin: 10px 0;
+}
+
+.intro-text p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn.yellow {
+    background-color: #FFC107;
     color: #fff;
 }
 
-#intro h1 {
-    margin: 0;
-    font-size: 2.5em;
+.btn.black {
+    background-color: #333;
+    color: #fff;
+    margin-left: 10px;
 }
 
-#intro h2 {
-    color: #d8d8d8;
-    margin: 10px 0;
+.btn:hover {
+    opacity: 0.8;
+}
+
+.intro-image img {
+    width: 700px;
+    border-radius: 10px;
+    margin-right: 200px;
+}
+
+@media (max-width: 768px) {
+    .intro-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .intro-image img {
+        width: 300px;
+        margin-top: 20px;
+    }
 }
 
 #projects {
@@ -115,56 +189,53 @@ nav ul li a {
 }
 
 #contact {
-    background: #f9f9f9;
     padding: 50px 20px;
-    text-align: center;
+    background: #fff;
 }
 
 #contact h2 {
+    text-align: center;
     margin-bottom: 20px;
     font-size: 2em;
-    color: #191a19;
+    color: #000;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 form label {
-    margin-top: 10px;
+    display: block;
+    margin-bottom: 5px;
 }
 
-form input, form textarea {
-    width: 80%;
+form input,
+form textarea {
+    width: 100%;
     padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
+    margin-bottom: 10px;
     border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 form button {
-    margin-top: 20px;
-    padding: 10px 20px;
+    display: block;
+    width: 100%;
+    padding: 10px;
     border: none;
-    background: #4CAF50;
-    color: #fff;
     border-radius: 5px;
+    background: #333;
+    color: #fff;
+    font-size: 1em;
     cursor: pointer;
+    transition: background 0.3s;
 }
 
 form button:hover {
-    background: #45a049;
-}
-
-@media (max-width: 768px) {
-    .project {
-        width: calc(100% - 20px);
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
+    background: #555;
 }
